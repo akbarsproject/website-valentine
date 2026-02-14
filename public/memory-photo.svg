@@ -1,0 +1,35 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b0f24"/>
+      <stop offset="45%" stop-color="#2a1034"/>
+      <stop offset="100%" stop-color="#5a1637"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff7ab6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff7ab6" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.4" r="0.5">
+      <stop offset="0%" stop-color="#fff1f8"/>
+      <stop offset="60%" stop-color="#ffd7e8"/>
+      <stop offset="100%" stop-color="#ffb8d4" stop-opacity="0.2"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1200" cy="240" r="160" fill="url(#moon)" />
+  <rect y="620" width="1600" height="380" fill="#120913"/>
+  <path d="M0 640C180 580 400 560 640 600C900 640 1200 660 1600 640V1000H0V640Z" fill="#1c0d22"/>
+  <path d="M0 700C200 660 460 650 720 680C980 710 1240 740 1600 710V1000H0V700Z" fill="#251129"/>
+  <g opacity="0.9">
+    <path d="M700 700C690 650 660 610 620 590C595 578 565 572 535 576C470 585 420 650 420 720C420 810 510 880 580 920C640 880 720 820 730 740C735 720 730 700 700 700Z" fill="#2d1230"/>
+    <path d="M960 720C950 670 920 630 880 610C855 598 825 592 795 596C730 605 680 670 680 740C680 830 770 900 840 940C900 900 980 840 990 760C995 740 990 720 960 720Z" fill="#341336"/>
+  </g>
+  <g opacity="0.8">
+    <circle cx="300" cy="200" r="3" fill="#ffd1e8"/>
+    <circle cx="520" cy="120" r="2" fill="#ffe6f3"/>
+    <circle cx="860" cy="180" r="2" fill="#ffd1e8"/>
+    <circle cx="1080" cy="120" r="3" fill="#ffe6f3"/>
+    <circle cx="1380" cy="200" r="2" fill="#ffd1e8"/>
+  </g>
+  <rect y="0" width="1600" height="1000" fill="url(#glow)"/>
+</svg>
