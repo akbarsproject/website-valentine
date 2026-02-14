@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/utils";
 
 type OurFutureProps = {
   onNext: () => void;
@@ -17,10 +19,10 @@ const lines = [
 ];
 
 const polaroids = [
-  { left: "8%", top: "18%", rotate: -8 },
-  { left: "72%", top: "14%", rotate: 6 },
-  { left: "14%", top: "62%", rotate: 4 },
-  { left: "68%", top: "66%", rotate: -6 },
+  { left: "8%", top: "18%", rotate: -8, src: "/future/1.jpg" },
+  { left: "72%", top: "14%", rotate: 6, src: "/future/2.jpg" },
+  { left: "14%", top: "62%", rotate: 4, src: "/future/3.jpg" },
+  { left: "68%", top: "66%", rotate: -6, src: "/future/4.jpg" },
 ];
 
 export default function OurFuture({ onNext, theme }: OurFutureProps) {
@@ -42,7 +44,7 @@ export default function OurFuture({ onNext, theme }: OurFutureProps) {
       {polaroids.map((card, index) => (
         <motion.div
           key={index}
-          className={`absolute hidden h-36 w-28 rounded-2xl border p-2 shadow-xl sm:block ${
+          className={`absolute hidden h-40 w-28 rounded-2xl border p-2 shadow-xl sm:block ${
             theme === "light"
               ? "border-[#f8d9e7] bg-white/80"
               : "border-white/20 bg-white/10"
@@ -52,7 +54,15 @@ export default function OurFuture({ onNext, theme }: OurFutureProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 + index * 0.2 }}
         >
-          <div className="h-full w-full rounded-xl bg-gradient-to-br from-pink-200/40 via-rose-200/30 to-white/10" />
+          <div className="relative h-full w-full overflow-hidden rounded-xl">
+            <Image
+              src={withBasePath(card.src)}
+              alt="Future memory"
+              fill
+              sizes="112px"
+              className="object-cover"
+            />
+          </div>
         </motion.div>
       ))}
       <motion.div
