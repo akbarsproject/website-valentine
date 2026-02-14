@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { withBasePath } from "@/lib/utils";
 
 type MemorySceneProps = {
   onNext: () => void;
@@ -56,7 +57,7 @@ export default function MemoryScene({ onNext, photoSrc, theme }: MemorySceneProp
             transition={{ delay: 0.4, duration: 1 }}
           >
             <Image
-              src={photoSrc}
+              src={withBasePath(photoSrc)}
               alt="Memory"
               width={1200}
               height={800}

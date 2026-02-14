@@ -1,4 +1,5 @@
 import { Howl } from "howler";
+import { withBasePath } from "@/lib/utils";
 
 type ToneOptions = {
   freq: number;
@@ -91,7 +92,7 @@ function createHeartbeat(duration = 0.8) {
 
 export function createSoundBank() {
   const ambient = new Howl({
-    src: ["/audio/romance.mp3"],
+    src: [withBasePath("/audio/romance.mp3")],
     loop: true,
     volume: 0.45,
   });
